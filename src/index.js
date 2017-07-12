@@ -6,7 +6,6 @@ import registerServiceWorker from './registerServiceWorker';
 
 import configureStore from './store/configureStore'
 import {dispatchLoadJobs} from './actions'
-import {dispatchLoadJob} from './actions'
 import { Provider } from 'react-redux'
 
 const store = configureStore()

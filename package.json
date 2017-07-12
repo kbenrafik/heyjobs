@@ -17,10 +17,16 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "bb": "nodemon server.js --exec babel-node --presets es2015,stage-2"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "enzyme": "^2.9.1",
+    "nodemon": "^1.11.0",
     "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1"
   }
