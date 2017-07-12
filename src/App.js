@@ -12,7 +12,7 @@ class App extends Component {
       <Router>
         <div>
           <Route path="/jobs" component={JobList} />
-          <Route path="/job/:id" component={JobDetail} />
+          <Route path="/job/:id" component={JobDetail}/>
         </div>
       </Router>
     );

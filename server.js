@@ -2,7 +2,7 @@
 const express = require('express');
 const app = require('express')();
 const path = require('path');
-const jobsContainer = require('./data/jobs.json');
+const jobsContainer = require('./jobs.json');
 
 app.use('/', express.static(path.join(__dirname, 'build')))
 

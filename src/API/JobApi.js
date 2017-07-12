@@ -1,18 +1,19 @@
-// middleware
+// Middleware (to separate the logic, could be a dependency)
 
-class JobApi {
+export class JobApi {
 
-	static getJobDetail() {
+	static getJob(id) {
 		return fetch('/mock/job/' + id)
 			.then(response => response.json())
 			.then(json => json)
 			.catch(error => console.log('parsing failed', error))
 	}
 
-	static getJobList() {
+	static getJobs() {
 		return fetch('/mock/jobs/')
 			.then(response => response.json())
 			.then(json => json)
 			.catch(error => console.log('parsing failed', error))
 	}
 }
+

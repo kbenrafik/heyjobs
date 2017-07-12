@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import JobDetail from '../JobDetail'
 
 const renderJobs = jobs => {
@@ -16,7 +17,7 @@ class JobList extends Component {
 	}
 
 	render() {
-		console.log(this.props.jobs);
+		console.log('list jobs', this.props.jobs);
 		return (
 			<div className="JobList__container">
 				{renderJobs(this.props.jobs)}
@@ -39,4 +40,12 @@ JobList.defaultProps = {
 	}],
 };
 
-export default JobList
+const mapStateToProps = state => {
+  return {
+    jobs: state.jobs
+  }
+}
+
+export default connect(
+    mapStateToProps
+  )(JobList);
