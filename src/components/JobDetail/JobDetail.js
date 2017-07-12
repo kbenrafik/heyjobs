@@ -20,8 +20,6 @@ const isDetailView = component =>
 class JobDetail extends Component {
 	constructor(props) {
 		super(props);
-
-		// this.props.loadJob(1);
 	}
 
 	
@@ -39,9 +37,9 @@ class JobDetail extends Component {
 	render() {
 		return (
 			<div className="JobDetail__container">
-				<h3>{this.props.title}</h3>
-				<p>{this.props.description}</p>
-				<span>{this.props.company}</span>
+				<h3 className="JobDetail__title">{this.props.title}</h3>
+				<p className="JobDetail__description">{this.props.description}</p>
+				<p>{this.props.company}</p>
 				{renderLinkMoreDetail(this.props.hasLinkMoreDetail, this.props.id)}
 			</div>
 		);
